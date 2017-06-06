@@ -1,0 +1,41 @@
+{
+  "name": "@grandlogic/slack-node-basic-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A basic Node based Slack bot application demonstrating the Slack API Adapters for Node.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "compile": "babel -d lib/ src/",
+    "run": "babel -d lib/ src/ && node lib/app",
+    "lint": "jshint --exclude node_modules .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Taha <tahasam@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@aoberoi/passport-slack": "^1.0.5",
+    "@slack/client": "^3.9.0",
+    "@slack/events-api": "^1.0.1",
+    "@slack/interactive-messages": "file:../../bot_stuff/my-node-slack-interactive-messages/node-slack-interactive-messages",
+    "apiai": "^4.0.2",
+    "async": "^2.4.1",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.16.1",
+    "debug": "^2.6.8",
+    "dotenv": "^4.0.0",
+    "eventemitter3": "^2.0.3",
+    "express": "^4.15.3",
+    "https-proxy-agent": "^1.0.0",
+    "mysql": "^2.13.0",
+    "node-rest-client": "^3.1.0",
+    "passport": "^0.3.2",
+    "pkginfo": "^0.4.0",
+    "request": "^2.72.0",
+    "retry": "^0.10.1",
+    "url-join": "^2.0.2",
+    "verify": "^0.1.2",
+    "winston": "^2.3.1",
+    "ws": "^3.0.0"
+  }
+}
