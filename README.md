@@ -51,8 +51,7 @@ From the bot channel send the message "Hi". The bot will respond with a simply r
 From the bot channel send the message "action". The bot will respond with a interactive message. Click on the buttons
 to see the bot respond to the actions.
 
-Invoke the URI: https://my_server.ngrok.io/test/bot_dm_webhook
-To have the bot send a incoming webhook message.
+Invoke the URI: https://my_server.ngrok.io/test/bot_dm_webhook to have the bot send a incoming webhook message.
 
 To use the simple api.ai integration, send the message "What is going on" and have it return
 a corresponding message from your api.ai account.
