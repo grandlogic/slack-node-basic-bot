@@ -1,6 +1,7 @@
-# A basic node.js app that demonstrates using the Slack APIs including:
+# A basic slack node bot demonstrating various lack APIs
 
-* Event API (subscribe to: "message.im" and "reaction_added")
+Slack APIs used:
+* Event API (subscribes to: "message.im" and "reaction_added")
 * Sending Text/Attachment/Interactive Messages via channel reply
 * Sending Text/Attachment/Interactive Messages via Incoming Webhook
 * Handling Interactive Message actions
