@@ -20,13 +20,15 @@ You will need a mysql database table to store bot access token. The app
 saves/reads from this table automatically during the "Add to Slack" handshake
 and when the app is started:
 
+```
 CREATE TABLE bot_token
 (
-	team_id VARCHAR(64),
-    access_token VARCHAR(64),
+  team_id VARCHAR(64),
+  access_token VARCHAR(64),
 
-    PRIMARY KEY bot_token_pk (team_id)
+  PRIMARY KEY bot_token_pk (team_id)
 );
+```
 
 A small workaround:
 The Slack npm module @slack/interactive-messages (v0.1.1) is not working properly from the npm repository. So
