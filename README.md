@@ -39,6 +39,7 @@ Download it and reference it from your package.json using the local file path.
 
 ## Node setup and running the app:
 npm install
+
 npm start
 
 ## Testing the app:
