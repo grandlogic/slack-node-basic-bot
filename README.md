@@ -1,4 +1,4 @@
-# A basic slack node bot demonstrating various lack APIs
+# A basic slack node bot demonstrating various slack APIs
 
 Slack APIs used:
 * Event API (subscribes to: "message.im" and "reaction_added")
