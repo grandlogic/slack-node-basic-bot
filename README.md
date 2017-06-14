@@ -79,7 +79,7 @@ CREATE TABLE bot_token
 );
 ```
 
-## Node setup and running the app:
+## Building and running the app:
 npm install
 
 npm start
@@ -106,8 +106,7 @@ The Slash command "/cancel" is supported in this bot. Make sure to register this
 command in the Slack admin team setup. See the "slash_commands.js" file for the exact
 URI to configure.
 
-# How to extend and customize your bot. Follow the patterns described here and shown
-in the source code.
+## How to extend and customize your bot. Follow the patterns described here and shown in the source code.
 
 ## Adding new Conversations
 Adding new conversations starts with adding the intents/actions in API.ai. Then
