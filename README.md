@@ -133,7 +133,8 @@ bot). See the example for incoming webhook in the file "ExpressSetup.js".
 ## Handling different kinds of Events
 If you need to support other advanced Slack events, register them in the "SlackEventListeners.js" class.
 
-That is it. If you follow the above conventions and follow the simple patterns in the code
+## That is it. 
+If you follow the above conventions and the simple patterns in the code
 you can build a robust bot for your Slack team and utilize all the major Slack APIs, while
 at the same time keeping the code modular and with good separation of concerns. Best of luck
 with your Slack bot!
