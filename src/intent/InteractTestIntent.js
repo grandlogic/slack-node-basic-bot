@@ -58,8 +58,14 @@ export default class InteractTestIntent {
 							text: "Are you sure?",
 							ok_text: "Yes",
 							dismiss_text: "No"
-						}
-					}
+						},
+					},
+					{
+						name: "game",
+						text: "Fetch Email",
+						type: "button",
+						value: "fetch_email"
+					},
 				]
 			}];
 
