@@ -39,7 +39,7 @@ function send_internal(apiai, slackClient, qr_text, payload_channel_id,
 	 value: "quick_reply"
 	 }];*/
 	opts.attachments[0].fields = [{
-		title: qr_text,
+		title: '\"' + qr_text + '\"',
 		value: "",
 		short: "false"
 	}];
