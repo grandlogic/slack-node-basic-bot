@@ -1,11 +1,12 @@
 /**
- * Created by tahas on 6/9/17.
+ * Created by Sam Taha.
  */
 
 "use strict";
 
 const util = require('util');
 import handleConversation from '../route_nlp.js';
+const quick_reply = require('../quick_reply.js');
 import HelpIntent from './HelpIntent.js';
 
 export default class HelpIntentCB {
@@ -34,29 +35,41 @@ export default class HelpIntentCB {
 
 			if (action.value === 'current_date') {
 
-				replacement.text = "Assuming NLP is hooked up, the current date is:";
+				//replacement.text = "Assuming NLP is hooked up, the current date is:";
 				replacement.attachments[0].text="";
 
-				// Route the user's interaction as a simulated conversational response
-				handleConversation(apiai, slackClient, "What time is it?", payload.channel.id, payload.user.id);
+				// Route the user's interaction as a simulated conversational response to demo "quick reply" feature
+				quick_reply.send_with_nlp(apiai, slackClient, "Current Date", payload.channel.id, payload.user.id, payload.user.name, "What time is it?");
 
 				return replacement;
 			}
 			else if (action.value === 'past_date') {
-				replacement.text = "";
-				replacement.attachments[0].text="The yesterday's date was...well never mind. I don't feel like answering you.";
+				//replacement.text = "";
+				replacement.attachments[0].text="";
+
+				// Route the user's interaction as a simulated "quick reply" feature but without any NLP routing/processing.
+				quick_reply.send_simple(apiai, slackClient, "Yesterdays Date", payload.channel.id, payload.user.id, payload.user.name,
+					"Yesterday's date was...well never mind. I don't feel like answering you.");
 
 				return replacement;
 			}
 			else if (action.value === 'compare_date') {
-				replacement.text = "Yikes, that is an odd question. Ask me something else.";
+				//replacement.text = "";
 				replacement.attachments[0].text="";
+
+				// Route the user's interaction as a simulated "quick reply" feature but without any NLP routing/processing.
+				quick_reply.send_simple(apiai, slackClient, "Compare Dates", payload.channel.id, payload.user.id, payload.user.name,
+					"Yikes, that is an odd question. Ask me something else.");
 
 				return replacement;
 			}
 			else { // Need special help
-				replacement.text = "No sure I can help you with that. Find a doctor perhaps.";
+				//replacement.text = "";
 				replacement.attachments[0].text="";
+
+				// Route the user's interaction as a simulated "quick reply" feature but without any NLP routing/processing.
+				quick_reply.send_simple(apiai, slackClient, "I need Special Help", payload.channel.id, payload.user.id, payload.user.name,
+					"Not sure I can help you with that. Find a doctor perhaps.");
 
 				return replacement;
 			}

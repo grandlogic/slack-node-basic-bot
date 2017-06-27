@@ -1,5 +1,5 @@
 /**
- * Created by tahas on 6/9/17.
+ * Created by Sam Taha.
  */
 
 "use strict";
@@ -30,8 +30,8 @@ export default class HelpIntent {
 
 		let attachments1 = [
 			{
-				text: "Try one of these questions:",
-				fallback: "You are unable to choose a game",
+				text: "",
+				fallback: "You are unable to figure this out",
 				callback_id: CALLBACK_ID,
 				color: "#3AA3E3",
 				attachment_type: "default",

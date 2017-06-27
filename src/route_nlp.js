@@ -1,5 +1,5 @@
 /**
- * Created by tahas on 6/7/17.
+ * Created by Sam Taha.
  */
 "use strict";
 
@@ -56,8 +56,9 @@ function handle_NLP_response_message(appai, slack, msgText, msgChannelId, msgUse
 					slack.chat.postMessage(msgChannelId, "Howdy").catch(console.error);
 					break;
 
-				case PaycheckWrongIntent.getIntentActionName(): ///////////////////////
-					PaycheckWrongIntent.buildSendResponse(slack, msgChannelId, response);
+				case 'check_time': ///////////////////////
+					let milliseconds = (new Date).getTime() / 1000;
+					slack.chat.postMessage(msgChannelId, "At the tone the date/time is: *<!date^" + milliseconds.toFixed(0) + "^{date_num} {time_secs}|Oops, I don't have the time>*").catch(console.error);
 					break;
 
 				case HelpIntent.getIntentActionName(): ///////////////////////

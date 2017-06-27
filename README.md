@@ -99,6 +99,9 @@ and get a response. From the bot channel send the message "_test action".
 The bot will respond with an interactive message. Click on the buttons
 to see the bot respond to the actions.
 
+Send the message "Help" will demonstrate the "Quick Reply" feature. If you implement
+an API.ai intent to handle checking time you can see more end to end functionality in action.
+
 To verify the incoming webhook is working invoke the
 URI: https://my_server.ngrok.io/test/bot_dm_webhook to have the bot send an incoming webhook message.
 

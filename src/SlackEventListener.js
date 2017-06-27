@@ -1,5 +1,5 @@
 /**
- * Created by tahas on 6/7/17.
+ * Created by Sam Taha.
  */
 "use strict";
 
@@ -22,10 +22,7 @@ export default class SlackEventListener {
 		this.slackEvents.on('message', (message, body) => {
 			// Only deal with messages that have no subtype (plain messages) and contain 'hi'
 
-			//console.log("message: " + util.inspect(message, {showHidden: false, depth: null}));
-			//console.log("body: " + util.inspect(body, {showHidden: false, depth: null}));
-
-			if (!message.subtype) { //This "IF" filters out the bot's own replies. Will be blank when a real user, and "bot_message" when the bots replies
+			if (!message.subtype || (body.subtype === "bot_message" && body.type === "event_callback")) { //This "IF" filters out the bot's own replies. Will be blank when a real user, and "bot_message" when the bots replies
 				console.log("message:: " + util.inspect(message, {showHidden: false, depth: null}));
 				console.log("body:: " + util.inspect(body, {showHidden: false, depth: null}));
 				// Initialize/Find a client
